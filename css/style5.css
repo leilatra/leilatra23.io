@@ -1,0 +1,216 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    color:#d1d5db;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15, 15, 35, 0.95);
+    padding:20px;
+    text-align:center;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(168, 85, 247, 0.3);
+}
+
+nav a{
+    color:#d1d5db;
+    margin:0 20px;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:17px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#a855f7;
+    text-shadow:0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* ===== HERO SECTION ===== */
+.accueil{
+    min-height:50vh;
+    scroll-margin-top:110px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 10% 60px;
+    background:linear-gradient(180deg, rgba(26,26,46,0.8) 0%, transparent 100%);
+}
+
+.contenu-accueil{
+    text-align:center;
+    max-width:600px;
+}
+
+.nom{
+    font-size:clamp(36px, 5vw, 52px);
+
+    color:#fff;
+    text-shadow:0 0 30px rgba(168, 85, 247, 0.4);
+    margin-bottom:15px;
+}
+
+.nom span{
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.role{
+    font-size:22px;
+    color:#9ca3af;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:60px 10%;
+}
+
+.titre{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    color:#fff;
+    position:relative;
+}
+
+.titre::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg, #ff2e93, #a855f7);
+    margin:15px auto 0;
+    border-radius:2px;
+}
+
+/* ===== FORMATION CARDS ===== */
+.conteneur-formations{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.carte-formation{
+    background:linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 35, 0.9));
+    padding:35px;
+    border-radius:20px;
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+    min-width:350px;
+    transition:0.3s;
+    border:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.carte-formation:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(168, 85, 247, 0.3);
+    border-color:#a855f7;
+}
+
+.icon-formation{
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:#fff;
+    flex-shrink:0;
+}
+
+.info-formation h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:8px;
+    line-height:1.4;
+}
+
+.info-formation .lieu{
+    color:#a855f7;
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.info-formation .statut{
+    color:#ff2e93;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#0f0f23;
+    color:#9ca3af;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    border-top:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.reseaux a{
+    color:#a855f7;
+    margin:0 15px;
+    font-size:28px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.reseaux a:hover{
+    color:#ff2e93;
+    transform:scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    nav{
+        padding:16px 12px;
+    }
+
+    nav a{
+        margin:0 12px;
+        font-size:16px;
+    }
+
+    .accueil{
+        padding:120px 5% 50px;
+    }
+
+    
+    .nom{
+        font-size:clamp(30px, 7vw, 36px);
+    }
+
+    
+    .carte-formation{
+        min-width:100%;
+    }
+    
+    section{
+        padding:40px 5%;
+    }
+}
+
