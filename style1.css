@@ -1,0 +1,378 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    color:#d1d5db;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(15, 15, 35, 0.95);
+    padding:20px;
+    text-align:center;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(168, 85, 247, 0.3);
+}
+
+nav a{
+    color:#d1d5db;
+    margin:0 20px;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:17px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#a855f7;
+    text-shadow:0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* ===== HERO SECTION ===== */
+.a-propos-hero{
+    height:60vh;
+    scroll-margin-top:110px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 10%;
+    background:linear-gradient(to bottom, rgba(15,15,35,0.9), rgba(26,26,46,0.8));
+    margin-top:60px;
+}
+
+
+
+
+.contenu-hero{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    text-align:center;
+}
+
+.photo-profil img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    padding:6px;
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    box-shadow:0 0 40px rgba(168, 85, 247, 0.5);
+    transition:0.4s;
+}
+
+.photo-profil img:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 60px rgba(168, 85, 247, 0.7);
+}
+
+.texte-hero h1{
+    font-size:48px;
+    color:#fff;
+    text-shadow:0 0 20px rgba(168, 85, 247, 0.4);
+    margin-bottom:10px;
+}
+
+.texte-hero h1 span{
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.texte-hero .sous-titre{
+    font-size:20px;
+    color:#9ca3af;
+    margin-bottom:15px;
+}
+
+.citation{
+    font-style:italic;
+    color:#a855f7;
+    font-size:16px;
+    margin-top:10px;
+}
+
+.citation i{
+    margin:0 8px;
+    opacity:0.7;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:80px 10%;
+}
+
+.titre{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    color:#fff;
+    position:relative;
+}
+
+.titre::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg, #ff2e93, #a855f7);
+    margin:15px auto 0;
+    border-radius:2px;
+}
+
+/* Presentation Section */
+.conteneur-presentation{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.carte-presentation{
+    background:rgba(26, 26, 46, 0.8);
+    padding:40px;
+    border-radius:20px;
+    border-left:4px solid #ff2e93;
+}
+
+.carte-presentation p{
+    margin:18px 0;
+    line-height:1.9;
+    font-size:18px;
+    color:#d1d5db;
+}
+
+.carte-presentation strong{
+    color:#a855f7;
+    font-weight:600;
+}
+
+/* Formation Section */
+.conteneur-formations{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.carte-formation{
+    background:linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.8));
+    padding:30px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    min-width:320px;
+    transition:0.3s;
+    border:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.carte-formation:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(168, 85, 247, 0.3);
+    border-color:#a855f7;
+}
+
+.icon-formation{
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+}
+
+.info-formation h3{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.info-formation .lieu{
+    color:#9ca3af;
+    font-size:15px;
+}
+
+.info-formation .statut{
+    color:#a855f7;
+    font-size:14px;
+    margin-top:5px;
+    font-weight:bold;
+}
+
+/* Qualites Section */
+.conteneur-qualites{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.carte-qualite{
+    background:rgba(26, 26, 46, 0.8);
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+    border:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.carte-qualite:hover{
+    transform:translateY(-12px);
+    border-color:#ff2e93;
+    box-shadow:0 15px 40px rgba(255, 46, 147, 0.2);
+}
+
+.carte-qualite i{
+    font-size:45px;
+    color:#a855f7;
+    margin-bottom:18px;
+}
+
+.carte-qualite h3{
+    color:#fff;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.carte-qualite p{
+    color:#9ca3af;
+    font-size:15px;
+}
+
+/* Loisirs Section */
+.conteneur-loisirs{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.carte-loisir{
+    background:linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.8));
+    padding:30px 40px;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    transition:0.3s;
+    min-width:160px;
+    border:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.carte-loisir:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 15px 40px rgba(168, 85, 247, 0.4);
+    background:linear-gradient(135deg, #ff2e93, #a855f7);
+    border-color:#ff2e93;
+}
+
+.carte-loisir i{
+    font-size:40px;
+    color:#ff2e93;
+    transition:0.3s;
+}
+
+.carte-loisir:hover i{
+    color:white;
+}
+
+.carte-loisir span{
+    color:#d1d5db;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.carte-loisir:hover span{
+    color:white;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#0f0f23;
+    color:#9ca3af;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    border-top:1px solid rgba(168, 85, 247, 0.2);
+}
+
+.reseaux a{
+    color:#a855f7;
+    margin:0 15px;
+    font-size:28px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.reseaux a:hover{
+    color:#ff2e93;
+    transform:scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 480px){
+    nav{
+        padding:14px 10px;
+    }
+
+    nav a{
+        margin:0 8px;
+        font-size:15px;
+    }
+
+    .a-propos-hero{
+        height:auto;
+        padding:120px 5% 60px;
+    }
+
+    .conteneu-hero{
+        flex-direction:column;
+    }
+
+    .texte-hero h1{
+        font-size:32px;
+    }
+
+    .photo-profil img{
+        width:180px;
+        height:180px;
+    }
+
+    .carte-formation{
+        min-width:100%;
+    }
+
+    .conteneur-loisirs{
+        gap:15px;
+    }
+
+    .carte-loisir{
+        padding:25px 30px;
+        min-width:140px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+}
+
